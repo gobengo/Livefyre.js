@@ -1,0 +1,15 @@
+{
+  "name": "Livefyre",
+  "version": "0.0.0",
+  "main": "dist/auth-livefyre.min.js",
+  "devDependencies": {
+    "almond": "0.2.6",
+    "cajon": "git@github.com:requirejs/cajon.git#~0.1.11",
+    "sinonjs": "~1.7.3"
+  },
+  "dependencies": {
+    "debug": "visionmedia/debug#~0.7.4",
+    "auth": "git@github.com:Livefyre/auth.git",
+    "auth-livefyre": "gobengo/auth-livefyre"
+  }
+}
