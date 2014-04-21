@@ -4,8 +4,7 @@
     almond: 'lib/almond/almond'
   },
   baseUrl: '..',
-  name: 'Livefyre',
-  include: ['almond'],
+  include: ['almond', 'Livefyre'],
   out: '../dist/Livefyre.js',
   preserveLicenseComments: false,
   optimize: 'uglify2',

@@ -3,12 +3,12 @@
         // Livefyre.define is defined by https://github.com/Livefyre/require
         Livefyre.define([], factory);
 
-    } else if (typeof define === 'function' && define.amd) {
+    } else if (typeof root['define'] === 'function' && root['define'].amd) {
         //Allow using this built library as an AMD module
         //in another project. That other project will only
         //see this AMD call, not the internal modules in
         //the closure below.
-        define([], factory);
+        root['define']([], factory);
 
     } else {
         //Browser globals case. Just assign the

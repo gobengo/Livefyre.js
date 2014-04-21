@@ -6,7 +6,8 @@ require.config({
     md5: 'lib/js-md5/js/md5',
     sinon: 'lib/sinonjs/sinon',
     chai: 'node_modules/chai/chai',
-    debug: 'lib/debug/debug'
+    debug: 'lib/debug/debug',
+    'livefyre-require': 'lib/livefyre-require/dist/livefyre-require'
   },
   packages: [{
     name: 'Livefyre',
