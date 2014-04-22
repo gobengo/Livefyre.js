@@ -8,4 +8,4 @@ lfRequire.define('auth', function () {
     return auth;
 });
 
-// TODO: Add other Livefyre.things on exports
+// maybe: Add other Livefyre.things on exports
