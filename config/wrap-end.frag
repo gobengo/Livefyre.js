@@ -1,6 +1,17 @@
-    //The modules for your project will be inlined above
-    //this snippet. Ask almond to synchronously require the
-    //module value for 'main' here and return it as the
-    //value to use for the public API for the built file.
-    return require('Livefyre');
+    // The return value from here will be assigned to window.Livefyre
+
+    var Livefyre = window.Livefyre || {};
+
+    // We only have an async reference to the Livefyre.js object...
+    // So define it here as something special
+    Livefyre.require = function () {
+        var args = arguments;
+        var self = this;
+        require(['Livefyre'], function (LivefyreJS) {
+            LivefyreJS.require.apply(self, args);
+        });
+    };
+    // and define
+    Livefyre.define = define;
+    return Livefyre;
 }));
