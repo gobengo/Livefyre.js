@@ -19,8 +19,8 @@ require.config({
     name: 'auth',
     location: 'lib/auth/src'
   },{
-    name: 'auth-livefyre',
-    location: 'lib/auth-livefyre/src'
+    name: 'livefyre-auth',
+    location: 'lib/livefyre-auth/src'
   }],
   shim: {
     'sinon': {

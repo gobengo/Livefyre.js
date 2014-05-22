@@ -1,4 +1,4 @@
-var auth = require('./auth')
+var auth = require('livefyre-auth');
 var lfRequire = require('livefyre-require');
 
 // Exports .require, .define, .requirejs
