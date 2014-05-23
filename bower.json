@@ -1,6 +1,6 @@
 {
   "name": "Livefyre",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "main": "dist/auth-livefyre.min.js",
   "devDependencies": {
     "almond": "0.2.6",
@@ -9,7 +9,7 @@
   },
   "dependencies": {
     "debug": "visionmedia/debug#~0.7.4",
-    "auth": "git@github.com:Livefyre/auth.git",
-    "auth-livefyre": "gobengo/auth-livefyre"
+    "livefyre-auth": "Livefyre/livefyre-auth",
+    "livefyre-require": "git@github.com:Livefyre/require.git"
   }
 }
