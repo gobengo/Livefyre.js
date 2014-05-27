@@ -5,7 +5,7 @@
   },
   baseUrl: '..',
   include: ['Livefyre'],
-  out: '../dist/Livefyre.js',
+  out: '../dist/Livefyre.min.js',
   preserveLicenseComments: false,
   optimize: 'uglify2',
   cjsTranslate: true,
