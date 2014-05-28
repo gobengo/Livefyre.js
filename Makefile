@@ -34,4 +34,9 @@ lint: build
 
 env=dev
 deploy: dist
-	./node_modules/.bin/lfcdn -e $(env) -c ./config/lfcdn.json
+	./node_modules/.bin/lfcdn -e $(env)
+
+env=dev
+build=1
+deploy_build: dist
+	./node_modules/.bin/lfcdn -e $(env) --build=$(build)
