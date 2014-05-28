@@ -1,10 +1,10 @@
-.PHONY: all build
+.PHONY: all build node_modules_prod
 
 all: build
 
 build: node_modules
 
-dist: node_modules
+dist: node_modules_prod
 	npm run build && npm run build-non-min
 
 version:
@@ -14,7 +14,14 @@ version:
 # if package.json changes, install
 node_modules: package.json
 	npm install
+	./node_modules/bower/bin/bower install
+	(cd lib/node-semver/ && make semver.browser.js)
 	touch $@
+
+node_modules_prod:
+	npm install --production
+	./node_modules/bower/bin/bower install --production
+	(cd lib/node-semver/ && make semver.browser.js)
 
 test: build
 	npm test
