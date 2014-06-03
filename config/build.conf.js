@@ -7,7 +7,7 @@
   include: ['Livefyre'],
   out: '../dist/Livefyre.js',
   preserveLicenseComments: false,
-  optimize: 'none',
+  optimize: 'uglify2',
   cjsTranslate: true,
   uglify2: {
     compress: {

@@ -13,5 +13,11 @@
     };
     // and define
     Livefyre.define = define;
+
+    Livefyre.require(['Livefyre'], function (LivefyreJS) {
+        for (var key in LivefyreJS) {
+            Livefyre[key] = LivefyreJS[key];
+        }
+    });
     return Livefyre;
 }));
