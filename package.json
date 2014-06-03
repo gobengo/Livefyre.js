@@ -7,15 +7,17 @@
     "name": "Benjamin Goering",
     "email": "ben@livefyre.com"
   },
-  "version": "0.0.0-pre",
-  "devDependencies": {
+  "version": "0.1.0",
+  "dependencies": {
     "bower": "*",
+    "requirejs": "2.1.9"
+  },
+  "devDependencies": {
     "chai": "1.8.1",
     "jshint": "~1.1.0",
     "mocha": "1.14.0",
     "mocha-phantomjs": "3.1.6",
     "phantomjs": "*",
-    "requirejs": "2.1.9",
     "http-server": "^0.6.1",
     "karma": "^0.12.2",
     "karma-cajon": "0.0.1",
@@ -26,10 +28,13 @@
   },
   "scripts": {
     "build": "./node_modules/requirejs/bin/r.js -o ./config/build.conf.js",
+    "build-non-min": "./node_modules/requirejs/bin/r.js -o ./config/build.conf.js optimize=none out=./dist/Livefyre.js",
     "hint": "./node_modules/jshint/bin/jshint src/ test/spec/; echo",
-    "postinstall": "./node_modules/bower/bin/bower install && (cd lib/node-semver/ && make semver.browser.js)",
     "start": "./node_modules/http-server/bin/http-server",
     "test": "./node_modules/karma/bin/karma start",
     "testp": "./node_modules/karma/bin/karma start --browsers=PhantomJS"
+  },
+  "optionalDependencies": {
+    "lfcdn": "git+ssh://git@github.com:Livefyre/lfcdn.git"
   }
 }
