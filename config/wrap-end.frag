@@ -2,6 +2,12 @@
 
     var Livefyre = window.Livefyre || {};
 
+    require(['Livefyre'], function (LivefyreJS) {
+        for (var key in LivefyreJS) {
+            Livefyre[key] = LivefyreJS[key];
+        }
+    });
+
     // We only have an async reference to the Livefyre.js object...
     // So define it here as something special
     Livefyre.require = function () {
@@ -13,5 +19,6 @@
     };
     // and define
     Livefyre.define = define;
+
     return Livefyre;
 }));
