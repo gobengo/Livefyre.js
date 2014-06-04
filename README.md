@@ -46,17 +46,17 @@ Livefyre.require([
 
 #### Exciting! So what are the available packages and what versions should I use?
 
-- streamhub-input  
+- `streamhub-input`  
     [Input](https://github.com/Livefyre/streamhub-input) is a lightweight comment editor and photo uploader.  
-    prod: v0.3.6  
+    `prod: v0.3.6`  
 
-- sidenotes  
+- `sidenotes`  
     [Sidenotes](http://answers.livefyre.com/developers/app-integrations/sidenotes/) is Livefyre's inline, contextual comments.  
-    prod: v1.0.5  
+    `prod: v1.0.5`  
 
-- streamhub-wall  
+- `streamhub-wall`  
     [LiveMediaWall](https://github.com/Livefyre/streamhub-wall) presents a Livefyre Collection of media content.  
-    prod: v3.0.0  
+    `prod: v3.0.0`  
 
 #### How can I test out pre-release versions of packages?
 
