@@ -4,7 +4,7 @@ Livefyre.js is the core library that should be installed on each Livefyre Custom
 
 ## Add to your Site
 
-Note: The recommended installation path is to actually include a `<script>` tag to load Livefyre/Livefyre-scout, which is very tiny and will download the latest version of Livefyre.js for you.
+Note: The recommended installation path is to include a `<script>` tag to a cdn release of [Livefyre/Livefyre-scout](//github.com/Livefyre/Livefyre-scout), which is very tiny and will download the latest version of Livefyre.js for you.
 
 ```html
 <script src="//cdn.livefyre.com/Livefyre.js"></script>
