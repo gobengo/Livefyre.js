@@ -26,7 +26,7 @@ Pinning to a full version guarantees that the Livefyre package code running on t
 * `package-name#1.1` - Minor version pin to v1.1. You'll get all bugfixes to this minor version, but no additional functionality or changes to default behavior.
 * `package-name#1.1.1` - Patch version pin to v1.1.1. The behavior of this embed will never change, even if there are bugfixes.
 
-An example interation using Livefyre.require could look like this:
+An example integration using Livefyre.require could look like this:
 
 ```html
 <!-- First add Livefyre.js to the page -->
