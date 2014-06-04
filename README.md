@@ -37,7 +37,7 @@ An example integration using Livefyre.require could look like this:
 Livefyre.require([
     'lfawesome#1',
     'lfsuperawesome#2.1.2'
-], function (LFAwesome, LFSuperawesome) {
+], function (LFAwesome, LFSuperAwesome) {
     var greatness = new LFAwesome();
     // etc..
 });
@@ -46,26 +46,23 @@ Livefyre.require([
 
 #### Exciting! So what are the available packages and what versions should I use?
 
-TODO(jj): uhhhhhh... wiki? Edit here? I don't want to expose the internal versions process to the public. THEY AREN'T READY.
+- streamhub-input
+    (Input)[https://github.com/Livefyre/streamhub-input] is a lightweight comment editor and photo uploader.
+    prod: v0.3.6
+
+- sidenotes
+    (Sidenotes)[http://answers.livefyre.com/developers/app-integrations/sidenotes/] is Livefyre's inline, contextual comments.
+    prod: v1.0.5
+
+- streamhub-wall
+    (LiveMediaWall)[https://github.com/Livefyre/streamhub-wall] presents a Livefyre Collection of media content.
+    prod: v3.0.0
 
 #### How can I test out pre-release versions of packages?
 
-Pre-release version are also available using the `lfenv` query param. New features will be deployed to our UAT testing environment before appearing in production integrations.
+You may see non-prod versions listed amongst the available packages. New features will be deployed to our UAT testing environment before appearing in production integrations. These pre-release versions are available using the `lfenv` query param.
 
-Get tomorrow's code today by specifying the `lfenv` query-string parameter when visiting a page using `Livefyre.require`. Supported values are `qa`, `uat`, and the default, `prod` (e.g. `http://mydemopage.com?lfenv=uat`). The version pins in your requires will still be respected.
-
-derpopolis:
-
-The latest version of [Livefyre/require](//github.com/Livefyre/require).
-
-* Supported packages
-* What is the latest version of package X?
-    - Go look at [lfpackges.json](//github.com/Livefyre/require/blob/master/src/lfpackages.json)
-    - Later: https://github.com/Livefyre/require/issues/16
-* Pro tips
-    - Override s3 bucket
-    - bypass cdn (?lfcdn=0)
-    - ?
+Get tomorrow's code today by specifying the `lfenv` query-string parameter when visiting a page using `Livefyre.require`. Supported values are `uat` and the default, `prod` (e.g. `http://mydemopage.com?lfenv=uat`). The version pins in your requires will still be respected.
 
 ### auth
 
@@ -74,4 +71,3 @@ The latest version of [Livefyre/livefyre-auth](//github.com/Livefyre/livefyre-au
 ### Coming Soon: Permalinks
 
 Powered by [streamhub-permalink](https://github.com/Joao-S-Martins/streamhub-permalink)
-
