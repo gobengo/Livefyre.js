@@ -10,7 +10,8 @@ require.config({
     debug: 'lib/debug/debug',
     requireLib: 'lib/requirejs/require',
     semver: 'lib/node-semver/semver.browser',
-    'text': 'lib/requirejs-plugins/lib/text'
+    'text': 'lib/requirejs-plugins/lib/text',
+    purl: 'lib/purl/purl'
   },
   packages: [{
     name: 'Livefyre',
@@ -27,6 +28,12 @@ require.config({
   },{
     name: 'livefyre-require',
     location: 'lib/livefyre-require/src'
+  },{
+    name: 'streamhub-permalink',
+    location: 'lib/streamhub-permalink/src'
+  },{
+    name: "streamhub-sdk",
+    location: "lib/streamhub-sdk/src"
   }],
   shim: {
     'sinon': {

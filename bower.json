@@ -1,6 +1,6 @@
 {
   "name": "Livefyre",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "main": "dist/auth-livefyre.min.js",
   "devDependencies": {
     "almond": "0.2.6",
@@ -10,6 +10,10 @@
   "dependencies": {
     "debug": "visionmedia/debug#~0.7.4",
     "livefyre-auth": "Livefyre/livefyre-auth",
-    "livefyre-require": "git@github.com:Livefyre/require.git"
+    "livefyre-require": "git@github.com:Livefyre/require.git",
+    "streamhub-permalink": "git://github.com/Livefyre/streamhub-permalink.git"
+  },
+  "resolutions": {
+    "view": "~1.1"
   }
 }
