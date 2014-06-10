@@ -1,9 +1,14 @@
 var auth = require('livefyre-auth');
 var lfRequire = require('livefyre-require');
+var permalink = require('./check-permalink');
 
 // Exports .require, .define, .requirejs
 exports = module.exports = lfRequire;
 exports['livefyre-auth'] = auth;
 exports.auth = auth;
 
-// maybe: Add other Livefyre.things on exports
+// If this is run on a page with a permalink fragment, get streamhub-permalink
+var contentPermalink = permalink.get();
+if (contentPermalink) {
+    permalink.load(contentPermalink);
+}
