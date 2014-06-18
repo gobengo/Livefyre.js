@@ -44,4 +44,5 @@ if (contentPermalink) {
 }
 
 // woot! LivefyreJS is here!
+// TODO(jj): this is useful
 LFJS.emit('LivefyreJS.initialized');
