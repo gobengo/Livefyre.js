@@ -17,6 +17,7 @@ module.exports = function(config) {
       'test/test-main.js',
       'config/requirejs.conf.js',
       {pattern: 'lib/**/*.js', included: false},
+      {pattern: 'lib/**/*.json', included: false},
       {pattern: 'src/**/*.js', included: false},
       {pattern: 'test/spec/**/*.js', included: false},
       {pattern: 'node_modules/**/*', included: false}
@@ -25,7 +26,7 @@ module.exports = function(config) {
 
     // list of files to exclude
     exclude: [
-      
+
     ],
 
 
