@@ -6,28 +6,17 @@
         for (var key in LivefyreJS) {
             Livefyre[key] = LivefyreJS[key];
         }
-        // woot! LivefyreJS is here!
-        LivefyreJS.emit('initialized');
     });
 
     // We only have an async reference to the Livefyre.js object...
-    // But Scout is going to start invoking require as soon as the LivefyreJS script has loaded,
-    // so define it here as something special
+    // So define it here as something special
     Livefyre.require = function () {
         var args = arguments;
+        var self = this;
         require(['Livefyre'], function (LivefyreJS) {
-            LivefyreJS.require.apply(LivefyreJS, args);
+            LivefyreJS.require.apply(self, args);
         });
     };
-
-    // and on
-    Livefyre.on = function () {
-        var args = arguments;
-        require(['Livefyre'], function (LivefyreJS) {
-            LivefyreJS.on.apply(LivefyreJS, args);
-        });
-    };
-
     // and define
     Livefyre.define = define;
 
