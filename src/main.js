@@ -3,9 +3,12 @@ var lfRequire = require('livefyre-require');
 var permalink = require('./check-permalink');
 
 // Exports .require, .define, .requirejs
-exports = module.exports = lfRequire;
+var LivefyreJS = exports = module.exports = lfRequire;
+// TODO: destroy dis
 exports['livefyre-auth'] = auth;
 exports.auth = auth;
+// This property can be checked to see if Livefyre.js is on the page.
+exports.lfjs = true;
 
 // extend to add .require, .define, .requirejs
 (function (sub, base) {
@@ -14,10 +17,10 @@ exports.auth = auth;
             sub[methodName] = base[methodName];
         }
     }
-})(LFJS, lfRequire);
+})(LivefyreJS, lfRequire);
 
 // decorate the require function to return livefyre-auth when "auth" is asked for
-LFJS.require = (function (require) {
+LivefyreJS.require = (function (require) {
     return function (deps, callback, errback) {
         var authIndex = -1;
         for (var i = 0; i < deps.length; i++) {
@@ -37,7 +40,7 @@ LFJS.require = (function (require) {
         }
         return require(deps, spliceAuthModule, errback);
     }
-})(LFJS.require);
+})(LivefyreJS.require);
 
 // If this is run on a page with a permalink fragment, get streamhub-permalink
 var contentPermalink = permalink.get();
