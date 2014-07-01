@@ -6,6 +6,8 @@
         for (var key in LivefyreJS) {
             Livefyre[key] = LivefyreJS[key];
         }
+        // woot! LivefyreJS is here!
+        LivefyreJS.emit('initialized');
     });
 
     // We only have an async reference to the Livefyre.js object...
