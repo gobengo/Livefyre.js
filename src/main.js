@@ -1,9 +1,10 @@
 var auth = require('livefyre-auth');
+var EventEmitter = require('event-emitter');
 var lfRequire = require('livefyre-require');
 var permalink = require('./check-permalink');
 
 // Exports .require, .define, .requirejs
-var LivefyreJS = exports = module.exports = lfRequire;
+var LivefyreJS = exports = module.exports = new EventEmitter();
 // TODO: destroy dis
 exports['livefyre-auth'] = auth;
 exports.auth = auth;
