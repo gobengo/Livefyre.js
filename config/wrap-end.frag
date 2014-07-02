@@ -7,7 +7,9 @@
             Livefyre[key] = LivefyreJS[key];
         }
         // woot! LivefyreJS is here!
-        Livefyre.emit('initialized');
+        setTimeout(function() {
+            LivefyreJS.emit('initialized');
+        }, 4);
     });
 
     // We only have an async reference to the Livefyre.js object...
