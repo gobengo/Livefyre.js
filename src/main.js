@@ -9,7 +9,7 @@ var LivefyreJS = exports = module.exports = new EventEmitter();
 exports['livefyre-auth'] = auth;
 exports.auth = auth;
 // This property can be checked to see if Livefyre.js is on the page.
-exports.lfjs = true;
+exports._lfjs = true;
 
 // extend to add .require, .define, .requirejs
 (function (sub, base) {
