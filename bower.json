@@ -1,6 +1,6 @@
 {
   "name": "Livefyre",
-  "version": "0.3.2",
+  "version": "0.3.3",
   "main": "dist/auth-livefyre.min.js",
   "devDependencies": {
     "almond": "0.2.6",
@@ -9,14 +9,14 @@
   },
   "dependencies": {
     "debug": "visionmedia/debug#~0.7.4",
-    "livefyre-auth": "Livefyre/livefyre-auth#~0.2.1",
+    "livefyre-auth": "Livefyre/livefyre-auth#~0.5.0",
     "livefyre-require": "git@github.com:Livefyre/require.git",
     "streamhub-permalink": "git://github.com/Livefyre/streamhub-permalink.git",
     "event-emitter": "git://github.com/Livefyre/event-emitter.git#~0.1.0"
   },
   "resolutions": {
     "view": "~1.1",
-    "auth": "~0.1.0",
+    "auth": "~0.2.0",
     "event-emitter": "~0.1.0"
   }
 }
