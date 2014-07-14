@@ -1,7 +1,9 @@
 (function (root, factory) {
     if (typeof Livefyre === 'object' && typeof Livefyre.define === 'function' && Livefyre.define.amd) {
         // Livefyre.define is defined by https://github.com/Livefyre/require
-        Livefyre.define([], factory);
+        // which is packaged into Livefyre.js,
+        // so if define is defined the we don't need to load Livefyre.js again
+        return;
 
     } else if (typeof Livefyre !== 'object' && typeof root['define'] === 'function' && root['define'].amd) {
         //Allow using this built library as an AMD module
