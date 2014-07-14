@@ -15,7 +15,6 @@ version:
 node_modules: package.json
 	npm install
 	./node_modules/bower/bin/bower install
-	(cd lib/node-semver/ && make semver.browser.js)
 	touch $@
 
 node_modules_prod:
