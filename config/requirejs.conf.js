@@ -10,7 +10,7 @@ require.config({
     chai: 'node_modules/chai/chai',
     debug: 'lib/debug/debug',
     requireLib: 'lib/requirejs/require',
-    semver: 'lib/node-semver/semver.browser',
+    semver: 'lib/node-lite/semver.lite',
     'text': 'lib/requirejs-plugins/lib/text',
     purl: 'lib/purl/purl'
   },
