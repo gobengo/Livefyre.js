@@ -20,7 +20,6 @@ node_modules: package.json
 node_modules_prod:
 	npm install --production
 	./node_modules/bower/bin/bower install --production
-	(cd lib/node-semver/ && make semver.browser.js)
 
 test: build
 	npm test
