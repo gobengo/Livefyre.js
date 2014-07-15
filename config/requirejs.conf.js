@@ -4,6 +4,7 @@ require.config({
     json: 'lib/requirejs-plugins/src/json',
     'event-emitter': 'lib/event-emitter/src/event-emitter',
     inherits: 'lib/inherits/inherits',
+    lfpackages: 'lib/lfpackages/dist',
     md5: 'lib/js-md5/js/md5',
     mout: 'lib/mout/src',
     sinon: 'lib/sinonjs/sinon',
