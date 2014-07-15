@@ -15,6 +15,7 @@ version:
 node_modules: package.json
 	npm install
 	./node_modules/bower/bin/bower install
+	(cd ./lib/lfpackages && make build)
 	touch $@
 
 node_modules_prod:
