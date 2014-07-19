@@ -15,7 +15,7 @@
     "event-emitter": "git://github.com/Livefyre/event-emitter.git#~0.1.0"
   },
   "resolutions": {
-    "view": "~1.1",
+    "view": "~1.3",
     "auth": "~0.2.1",
     "event-emitter": "~0.1.0",
     "base64": "~0.4.0"
