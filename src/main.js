@@ -39,6 +39,9 @@ LivefyreJS.require = (function (require) {
         if (authIndex > -1) {
             deps.splice(authIndex, 1);
         }
+        if (deps.length === 0) {
+            return spliceAuthModule([]);
+        }
         return require(deps, spliceAuthModule, errback);
     }
 })(LivefyreJS.require);
