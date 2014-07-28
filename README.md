@@ -44,9 +44,48 @@ Livefyre.require([
 </script>
 ```
 
+#### Neat Tricks
+
+Livefyre require has some options when loading modules, these are exposed via query params on the current page URL.
+
+`lfenv` Change the env: `{prod|uat|qa}`
+
+'prod' is the default env.
+
+`lfmin` If there is an unminified main/index file for the modules, fetch it: `{0|1}`
+
+Caveat, the presence of non-minified files is up to the module author.
+
+{file}.min.js is fetched by default. The non-minified file is expected to be named {file}.js and present in the same directory.
+
+`lfcdn` Choose whether to fetch the cached files or use the originating s3 bucket: `{0|1}`
+
+`lfVersion` Supply a dictionary-like of package version overrides e.g. `?lfVersion[herp]=1.0.0&lfVersion[derp]=2.0.0`. These version values will take precedence.
+
+E.g. www.io.xxx?lfcdn=0&lfmin=0&lfenv=qa will fetch the non-cached, non-minified, qa version of the module.
+
+`lfbucket` It is possible to deploy to different s3 buckets for testing builds, etc: `{dev|qa|uat}` are supported by lfcdn and by this option.
+
+`lfjsUrl` It is possible to have scout fetch Livefyre.js from a specified url.
+
+
 #### Exciting! So what are the available packages and what versions should I use?
 
 The current LF packages are listed here: [packages.html](//cdn.livefyre.com/packages.html)
+
+#### Deploy Process
+
+1) Push a new version of the module to the CDN using [lfcdn](https://github.com/Livefyre/lfcdn), this will place the files at a conventional url so that Livefyre.require can find your module. The main/index file for the module should be specified in the lfpackages.json.
+
+2) Build [executor](http://build.fyre.co/jenkins/job/executor/).
+
+3) Livefyre.require(module#{version})!
+
+```
+Livefyre.require(['streamhub-input#v0.2'], function (Input) {
+  console.log('Haz Input module: ' + !!Input);
+});
+```
 
 #### How can I test out pre-release versions of packages?
 
