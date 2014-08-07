@@ -48,10 +48,6 @@ Livefyre.require([
 
 Livefyre require has some options when loading modules, these are exposed via query params on the current page URL.
 
-`lfenv` Change the env: `{prod|uat|qa}`
-
-'prod' is the default env.
-
 `lfmin` If there is an unminified main/index file for the modules, fetch it: `{0|1}`
 
 Caveat, the presence of non-minified files is up to the module author.
@@ -89,9 +85,15 @@ Livefyre.require(['streamhub-input#v0.2'], function (Input) {
 
 #### How can I test out pre-release versions of packages?
 
-You may see non-prod versions listed amongst the available packages. New features will be deployed to our UAT testing environment before appearing in production integrations. These pre-release versions are available using the `lfenv` query param.
+You may see non-prod versions listed amongst the available packages. New features will be deployed to our UAT testing environment before appearing in production integrations.
 
-Get tomorrow's code today by specifying the `lfenv` query-string parameter when visiting a page using `Livefyre.require`. Supported values are `uat` and the default, `prod` (e.g. `http://mydemopage.com?lfenv=uat`). The version pins in your requires will still be respected.
+Get tomorrow's code today by specifying the a prerelease env rather than a semver version. e.g.:
+
+```
+Livefyre.require(['streamhub-input#qa'], cb);
+```
+
+Supported envs are `dev`, `qa`, and `uat`.
 
 ### auth
 
