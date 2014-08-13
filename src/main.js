@@ -1,7 +1,6 @@
 var auth = require('livefyre-auth');
 var EventEmitter = require('event-emitter');
 var lfRequire = require('livefyre-require');
-var permalink = require('./check-permalink');
 
 // Exports .require, .define, .requirejs
 var LivefyreJS = exports = module.exports = new EventEmitter();
@@ -45,9 +44,3 @@ LivefyreJS.require = (function (require) {
         return require(deps, spliceAuthModule, errback);
     }
 })(LivefyreJS.require);
-
-// If this is run on a page with a permalink fragment, get streamhub-permalink
-var contentPermalink = permalink.get();
-if (contentPermalink) {
-    permalink.load(contentPermalink);
-}
