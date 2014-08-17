@@ -12,7 +12,8 @@
     "livefyre-auth": "Livefyre/livefyre-auth#^0.9.0",
     "livefyre-require": "git@github.com:Livefyre/require.git",
     "streamhub-permalink": "git://github.com/Livefyre/streamhub-permalink.git",
-    "event-emitter": "git://github.com/Livefyre/event-emitter.git#~0.1.0"
+    "event-emitter": "git://github.com/Livefyre/event-emitter.git#~0.1.0",
+    "permalink-hub": "git@github.com:joseph-ross-work/permalink-hub.git"
   },
   "resolutions": {
     "event-emitter": "~0.1.0",

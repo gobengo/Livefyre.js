@@ -1,6 +1,11 @@
 var auth = require('livefyre-auth');
 var EventEmitter = require('event-emitter');
 var lfRequire = require('livefyre-require');
+var PermalinkHub = require('permalink-hub');
+
+var permalinkHub = new PermalinkHub({
+    bus: window
+});
 
 // Exports .require, .define, .requirejs
 var LivefyreJS = exports = module.exports = new EventEmitter();
