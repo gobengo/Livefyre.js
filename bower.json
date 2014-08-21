@@ -12,12 +12,11 @@
     "livefyre-auth": "Livefyre/livefyre-auth#^0.9.0",
     "livefyre-require": "git@github.com:Livefyre/require.git",
     "streamhub-permalink": "git://github.com/Livefyre/streamhub-permalink.git",
-    "event-emitter": "git://github.com/Livefyre/event-emitter.git#~0.1.0"
+    "event-emitter": "git://github.com/Livefyre/event-emitter.git#~0.0.5"
   },
   "resolutions": {
-    "event-emitter": "~0.1.0",
     "base64": "~0.4.0",
-    "auth": "0.4.0",
+    "auth": "~0.4.0",
     "view": "~1.3"
   }
 }
