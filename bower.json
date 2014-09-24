@@ -16,9 +16,8 @@
     "permalink-hub": "Livefyre/permalink-hub#0.0.1"
   },
   "resolutions": {
-    "event-emitter": "~0.1.0",
     "base64": "~0.4.0",
-    "auth": "0.4.0",
+    "auth": "~0.4.0",
     "view": "~1.3"
   }
 }

@@ -20,7 +20,7 @@ node_modules: package.json
 
 node_modules_prod:
 	npm install --production
-	./node_modules/bower/bin/bower install --production bower --force-latest
+	./node_modules/bower/bin/bower install --production --force-latest
 	(cd ./lib/lfpackages && make build)
 
 test: build
