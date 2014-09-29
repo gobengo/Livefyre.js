@@ -36,9 +36,6 @@ require.config({
   },{
     name: "streamhub-sdk",
     location: "lib/streamhub-sdk/src"
-  },{
-    name: "permalink-hub",
-    location: "lib/permalink-hub/src"
   }],
   shim: {
     'sinon': {
