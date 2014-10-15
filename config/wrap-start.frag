@@ -26,3 +26,7 @@
     }
 }(this, function () {
     //almond, and your modules will be inlined here
+    // configure require, ghetto style
+    require = {
+        skipDataMain: true
+    };
