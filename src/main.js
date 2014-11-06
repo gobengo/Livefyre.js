@@ -22,13 +22,32 @@ exports._lfjs = true;
 })(LivefyreJS, lfRequire);
 //Do not insert code before this
 
-var contentPermalink = permalink.get();
-if (contentPermalink) {
-    var permalinkHub = new PermalinkHub({
-        bus: window
+ 
+var permalinkModalDisabled = false;
+ 
+LivefyreJS.on('_configurationComplete', function () {
+    var contentPermalink = permalink.get();
+    if (contentPermalink) {
+        var permalinkHub = new PermalinkHub({
+            bus: window,
+            modalDisabled: permalinkModalDisabled
+        });
+        if (!permalinkModalDisabled) {
+            permalink.load(contentPermalink);
+        }
+    }    
+});
+
+LivefyreJS.on('initialized', function () {
+    LivefyreJS.emit('beforeLoadPermalinks', {
+        disableModal: function () {
+            permalinkModalDisabled = true;
+        }
     });
-    permalink.load(contentPermalink);
-}
+ 
+    LivefyreJS.emit('_configurationComplete');
+});
+
 
 // decorate the require function to return livefyre-auth when "auth" is asked for
 LivefyreJS.require = (function (require) {
