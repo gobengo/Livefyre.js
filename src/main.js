@@ -1,6 +1,8 @@
 var auth = require('livefyre-auth');
 var EventEmitter = require('event-emitter');
 var lfRequire = require('livefyre-require');
+var permalink = require('./check-permalink');
+var PermalinkHub = require('permalink-hub');
 
 // Exports .require, .define, .requirejs
 var LivefyreJS = exports = module.exports = new EventEmitter();
@@ -18,6 +20,34 @@ exports._lfjs = true;
         }
     }
 })(LivefyreJS, lfRequire);
+//Do not insert code before this
+
+ 
+var permalinkModalDisabled = false;
+ 
+LivefyreJS.on('_configurationComplete', function () {
+    var contentPermalink = permalink.get();
+    if (contentPermalink) {
+        var permalinkHub = new PermalinkHub({
+            bus: window,
+            modalDisabled: permalinkModalDisabled
+        });
+        if (!permalinkModalDisabled) {
+            permalink.load(contentPermalink);
+        }
+    }    
+});
+
+LivefyreJS.on('initialized', function () {
+    LivefyreJS.emit('beforeLoadPermalinks', {
+        disableModal: function () {
+            permalinkModalDisabled = true;
+        }
+    });
+ 
+    LivefyreJS.emit('_configurationComplete');
+});
+
 
 // decorate the require function to return livefyre-auth when "auth" is asked for
 LivefyreJS.require = (function (require) {
